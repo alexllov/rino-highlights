@@ -1,0 +1,86 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "RINO",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#variables"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.rino",
+          "match": "\\b(if|then|else|scene|overlay|access|table|end|run|exit|START|import|as)\\b"
+        },
+        {
+          "name": "keyword.control.rino",
+          "match": "\\s*(->|\\|)\\s"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.rino",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.rino",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.rino",
+          "match": "#.*\\Z"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.rino",
+          "match": "\\d"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.rino",
+          "match": "\\.[a-zA-Z][a-zA-Z0-9_]*\\b"
+        },
+        {
+          "name": "support.function.rino",
+          "match": "\\b(say|ask|num|isnum|isint)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "support.variable.rino",
+          "match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.rino"
+}

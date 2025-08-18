@@ -1,0 +1,25 @@
+{
+  "name": "rino-highlights",
+  "displayName": "RINO Highlights",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "rino",
+      "aliases": ["RINO", "rino"],
+      "extensions": [".cya"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "rino",
+      "scopeName": "source.rino",
+      "path": "./syntaxes/rino.tmLanguage.json"
+    }]
+  }
+}

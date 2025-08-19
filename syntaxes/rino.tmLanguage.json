@@ -15,6 +15,9 @@
       "include": "#numbers"
     },
     {
+      "include": "#booleans"
+    },
+    {
       "include": "#functions"
     },
     {
@@ -61,6 +64,14 @@
         }
       ]
     },
+    "booleans": {
+      "patterns": [
+        {
+          "name": "constant.language.rino",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
     "functions": {
       "patterns": [
         {
@@ -69,7 +80,7 @@
         },
         {
           "name": "support.function.rino",
-          "match": "\\b(say|ask|num|isnum|isint)\\b"
+          "match": "\\b(say|ask|num|isnum|isint|save|load)\\b"
         }
       ]
     },

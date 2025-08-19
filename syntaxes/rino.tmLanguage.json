@@ -18,6 +18,9 @@
       "include": "#booleans"
     },
     {
+      "include": "#booleanOperators"
+    },
+    {
       "include": "#functions"
     },
     {
@@ -69,6 +72,14 @@
         {
           "name": "constant.language.rino",
           "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "booleanOperators": {
+      "patterns": [
+        {
+          "name": "constant.language.rino",
+          "match": "\\b(and|or)\\b"
         }
       ]
     },
